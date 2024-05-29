@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Product {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer id;
+    private Integer product_id;
 
     private String name;
 
@@ -14,65 +14,46 @@ public class Product {
 
     private String type;
 
-    private String price;
+    private String introduction;
 
-    @Lob
-    private byte[] image;
+	public Integer getProduct_id() {
+		return product_id;
+	}
 
-    public Product() {}
-    public Product(String name, String address, String type, String price, byte[] image) {
-        this.name = name;
-        this.address = address;
-        this.type = type;
-        this.price = price;
-        this.image = image;
-    }
+	public void setProduct_id(Integer product_id) {
+		this.product_id = product_id;
+	}
 
-    public Integer getId() {
-        return id;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String getAddress() {
-        return address;
-    }
+	public String getAddress() {
+		return address;
+	}
 
-    public String getType() {
-        return type;
-    }
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
-    public String getPrice() {
-        return price;
-    }
+	public String getType() {
+		return type;
+	}
 
-    public byte[] getImage() {
-        return image;
-    }
+	public void setType(String type) {
+		this.type = type;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public String getIntroduction() {
+		return introduction;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-    public void setImage(byte[] image) {
-        this.image = image;
-    }
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction;
+	}
 }
+    
